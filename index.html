@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Website</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <!-- Popup Nama -->
+<div class="name-popup" id="namePopup">
+  <div class="popup-content">
+    <h2>Selamat Datang!</h2>
+    <p>Silakan masukkan nama kamu:</p>
+    <input type="text" id="popupName" placeholder="Nama kamu..." />
+    <button id="popupBtn">Masuk</button>
+  </div>
+</div>
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo"><img src="img/h logo.png" alt="" ></div>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#profile">Our Profile</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Message Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="home">
+    <section class="hero">
+      <h1 id='welcome'>Hi name, Welcome To Website</h1>
+      <p>Ini adalah website latihan pertama</p>
+      <!-- <div class="hero-canvas"><img src="img/wwww.jpeg" alt=""></div> -->
+    </section>
+  </main>
+
+<section id="profile" class="profile">
+   <div class="container">
+
+      <h2>Profile</h2>
+      <p>
+        Halo, nama saya Haikal Firansyah seorang Web Developer yang sedang belajar dan mengembangkan keterampilan di bidang teknologi.
+        Saya memiliki ketertarikan pada pengembangan web, teknologi, dan pemrograman modern.
+      </p>
+    
+      <div class="visi-misi">
+        <div class="visi">
+          <h3>Visi</h3>
+          <p>
+            Menjadi seorang profesional di bidang teknologi dengan fokus pada pengembangan web,
+            serta memberikan kontribusi positif melalui karya yang bermanfaat dan inovatif.
+          </p>
+        </div>
+        <div class="misi">
+          <h3>Misi</h3>
+          <ul>
+            <li>Menguasai keterampilan pemrograman web secara menyeluruh (frontend & backend).</li>
+            <li>Mempelajari dan mengimplementasikan praktik terbaik dalam keamanan siber.</li>
+            <li>Membangun portofolio digital yang berisi proyek-proyek nyata dan bermanfaat.</li>
+            <li>Terus belajar dan beradaptasi dengan perkembangan teknologi terbaru.</li>
+          </ul>
+        </div>
+      </div>
+   </div>
+</section>
+
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <div class="section-title">Portfolio</div>
+      <div class="portfolio-flex">
+        <div class="card">Web profile company J&T Cargo<br><img src="img/web company.png" alt=""><br><span class="muted">Dibuat menggunakan HTML, CSS, dan JavaScript</span></div>
+        <div class="card">Web Gallery foto<br><img src="img/web galeri.png" alt=""><br><span class="muted">Dibuat menggunakan HTML, CSS, dan PHP</span></div>
+        <div class="card">Web To-Do List<br><img src="img/web todolist.png" alt=""><br><span class="muted">Dibuat menggunakan HTML, CSS, PHP, dan JavaScript</span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Headquarters -->
+  <section class="hq">
+    <div class="container">
+      <div class="section-title">Our Headquarter</div>
+      <div class="hq-grid">
+        <div class="hq-item">
+          <div class="hq-circle"><img src="img/jakarta.png" alt=""></div>
+          <div>Jakarta</div>
+        </div>
+        <div class="hq-item">
+          <div class="hq-circle"><img src="img/bandung2.png" alt=""></div>
+          <div>Bandung</div>
+        </div>
+        <div class="hq-item">
+          <div class="hq-circle"><img src="img/surabaya.png" alt=""></div>
+          <div>Surabaya</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-title">Message Us</div>
+      <div class="contact-grid">
+        <form id="msgForm" onsubmit="event.preventDefault(); updatePreview(); this.reset();">
+          <div class="field">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" placeholder="Nama" required />
+          </div>
+
+          <div class="field">
+            <label for="tgl">Tanggal Lahir</label>
+            <input type="date" id="tgl" />
+          </div>
+
+          <div class="field">
+            <label>Jenis Kelamin</label>
+            <div class="row">
+              <label class="radio"><input type="radio" name="jk" value="Laki - Laki" checked /> Laki-Laki</label>
+              <label class="radio"><input type="radio" name="jk" value="Perempuan" /> Perempuan</label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="pesan">Pesan</label>
+            <textarea id="pesan" placeholder="Pesan"></textarea>
+          </div>
+
+          <button class="submit-btn" type="submit">Submit</button>
+        </form>
+
+        <aside class="preview" id="previewBox">
+          <div class="muted" id="timeNow">Current time: –</div>
+          <div><strong>Nama</strong> : <span id="outNama">–</span></div>
+          <div><strong>Tanggal Lahir</strong> : <span id="outTgl">–</span></div>
+          <div><strong>Jenis Kelamin</strong> : <span id="outJk">–</span></div>
+          <div><strong>Pesan</strong> : <span id="outPesan">–</span></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="container">
+    Created By Haikal Firansyah
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
